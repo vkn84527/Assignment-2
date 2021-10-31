@@ -13,7 +13,7 @@ var mailOptions = {
   form: 'vikas.kumar1@jungleworks.com',
   to: 'vkn84527@gmail.com',
   subject: 'Successfully Register',
-  html: '<h1>Hello, student </h1><p>Welcome to this project! You have\
+  html: '<h1>Hello, Dear </h1><p>Welcome to this project! You have\
   Successfully Register </p>' 
 };
 function ab2() {

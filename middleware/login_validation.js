@@ -7,15 +7,15 @@ const validation = joi.object({
     password: joi.string().min(5).required()
 });
 
-const studentloginValidation = async (req, res, next) => {
+const userloginValidation = async (req, res, next) => {
     const payload = {
-        email: req.body.student_email,
-        password: req.body.student_password
+        email: req.body.user_email,
+        password: req.body.user_password
     };
 
     const { error } = validation.validate(payload);
     if (error) {
-        responses.sendResponse(res, `Error in Student Data : ${error.message}`, constants.STATUS_CODES.UNAUTHORIZED)
+        responses.sendResponse(res, `Error in user Data : ${error.message}`, constants.STATUS_CODES.UNAUTHORIZED)
     } else {
         next();
     }
@@ -23,4 +23,4 @@ const studentloginValidation = async (req, res, next) => {
 
 
 
-module.exports = { studentloginValidation }
+module.exports = { userloginValidation }

@@ -9,12 +9,14 @@ app.use(bodyParser.json());
 
 
 app.get("/", (req, res) => {
+    
     res.json({ message: "Welcome,Server is working Fine.........  " });
-
+   
 });
 const port = process.env.PORT || 3000
 require('./database/db_connection')
-require("./routes/student_route")(app);
+require("./routes/user_route")(app);
+require("./routes/vaccinate_route")(app)
 
 
 

@@ -7,16 +7,15 @@ const sendResponse = (res, msg, status) => {
     })
 }
 
-const sendmessResponse = (res, msg, movie, status) => {
-    
+const sendResponse2 = (res, msg,msg2, status) => {
     return res.json({
         message: msg,
-        Movies: movie,
+        Total: msg2,
         status: status
     })
 }
 
-const sendtokenstudentResponse = (res, msg, token, student_email, student_id, status) => {
+const sendtokenuserResponse = (res, msg, token, student_email, student_id, status) => {
     return res.json({
         Message: msg,
         Token: token,
@@ -27,4 +26,4 @@ const sendtokenstudentResponse = (res, msg, token, student_email, student_id, st
 }
 
 
-module.exports = { sendResponse, sendmessResponse, sendtokenstudentResponse }
+module.exports = { sendResponse, sendtokenuserResponse ,sendResponse2}

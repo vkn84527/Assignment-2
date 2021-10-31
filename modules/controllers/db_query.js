@@ -10,4 +10,5 @@ const execute_query = (sql_query, values) => {
     })
 }
 
+
 module.exports = { execute_query }
